@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/app_bg_image">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/layPayWithPointsContainer"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/layNameContainer"
+            android:layout_marginTop="0dp">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                style="@style/LightTextInputLayoutEditTextLayout"
+                app:hintTextAppearance="@style/LightTextInputLayoutFloatingLabel">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/LightTextInputLayoutEditText"
+                    android:id="@+id/txtCusFirstName"
+                    android:singleLine="true"
+                    android:hint="@string/cus_profile_fname"
+                    android:layout_marginRight="5dp"
+                    android:textSize="@dimen/app_text_view_size"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                style="@style/LightTextInputLayoutEditTextLayout"
+                app:hintTextAppearance="@style/LightTextInputLayoutFloatingLabel">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/LightTextInputLayoutEditText"
+                    android:hint="@string/cus_profile_lname"
+                    android:id="@+id/txtCusLastName"
+                    android:singleLine="true"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="@dimen/app_text_view_size"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layNameContainer"
+            android:textColorHint="@color/light_color_control_hint_color"
+            style="@style/LightTextInputLayoutEditTextLayout"
+            app:hintTextAppearance="@style/LightTextInputLayoutFloatingLabel"
+            android:id="@+id/layEmailContainer">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/LightTextInputLayoutEditText"
+                android:hint="@string/customer_email"
+                android:id="@+id/txtCusEmail"
+                android:inputType="textEmailAddress"
+                android:textSize="@dimen/app_text_view_size"
+                android:singleLine="true"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="0dp"
+            android:id="@+id/lblCusGender"
+            android:text="@string/cus_pro_gender"
+            android:textSize="@dimen/app_text_view_size"
+            android:textColor="@color/light_color_control_hint_color"
+            android:layout_below="@+id/layEmailContainer"
+            />
+
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/radioGroup"
+            android:layout_below="@+id/layEmailContainer"
+            android:layout_toEndOf="@+id/lblCusMaritalStatus"
+            android:layout_marginTop="10dp">
+
+            <RadioButton android:id="@+id/radio_male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cus_gen_male"
+                android:checked="true"
+                android:textColor="@color/light_color_control_hint_color"
+                app:buttonTint="@color/light_color_control_hint_color"
+                tools:ignore="MissingPrefix" />
+
+            <RadioButton android:id="@+id/radio_female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cus_gen_female"
+                android:textColor="@color/light_color_control_hint_color"
+                app:buttonTint="@color/light_color_control_hint_color"
+                tools:ignore="MissingPrefix" />
+
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="0dp"
+            android:id="@+id/lblCusMaritalStatus"
+            android:text="@string/cus_marital_status"
+            android:textSize="@dimen/app_text_view_size"
+            android:textColor="@color/light_color_control_hint_color"
+            android:layout_below="@+id/lblCusGender"
+            />
+
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/radioGroupMaritalStatus"
+            android:layout_below="@+id/lblCusGender"
+            android:layout_toEndOf="@+id/lblCusMaritalStatus"
+            android:layout_marginTop="20dp">
+
+            <RadioButton android:id="@+id/radio_single"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cus_marital_single"
+                android:checked="true"
+                android:textColor="@color/light_color_control_hint_color"
+                app:buttonTint="@color/light_color_control_hint_color"
+                tools:ignore="MissingPrefix" />
+
+            <RadioButton android:id="@+id/radio_married"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cus_marital_married"
+                android:textColor="@color/light_color_control_hint_color"
+                app:buttonTint="@color/light_color_control_hint_color"
+                tools:ignore="MissingPrefix" />
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/layBirthDayContainer"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/lblCusMaritalStatus">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                style="@style/LightTextInputLayoutEditTextLayout"
+                app:hintTextAppearance="@style/LightTextInputLayoutFloatingLabel"
+                android:visibility="visible">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/LightTextInputLayoutEditText"
+                    android:id="@+id/txtCusBirthday"
+                    android:singleLine="true"
+                    android:hint="@string/cus_pro_birthday"
+                    android:layout_marginRight="5dp"
+                    android:textSize="@dimen/app_text_view_size" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                style="@style/LightTextInputLayoutEditTextLayout"
+                app:hintTextAppearance="@style/LightTextInputLayoutFloatingLabel"
+                android:id="@+id/layCusAnniversaryContainer"
+                android:visibility="visible">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/LightTextInputLayoutEditText"
+                    android:hint="@string/cus_pro_anniversary"
+                    android:id="@+id/txtCusAnniversary"
+                    android:singleLine="true"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="@dimen/app_text_view_size" />
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/button_background"
+            android:layout_below="@+id/layBirthDayContainer"
+            android:text="UPDATE"
+            android:id="@+id/btnUpdateProfile"
+            android:textSize="14sp"
+            android:textColor="@color/color_white"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

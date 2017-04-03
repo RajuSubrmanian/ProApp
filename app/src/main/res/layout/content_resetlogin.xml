@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".ResetLoginActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/app_margin_size"
+        android:layout_marginLeft="@dimen/app_margin_size"
+        android:id="@+id/layWelcomeForm"
+        android:layout_centerVertical="true">
+
+        <ImageView
+            android:layout_width="@dimen/app_inspirenetz_logo_width"
+            android:layout_height="@dimen/app_inspirenetz_logo_height"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/pb_logo"
+            android:id="@+id/iconLogo"
+            android:visibility="visible"
+            />
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="Pitney Bowes"
+            android:textColor="@color/color_white"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"/>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:id="@+id/imgCusIcon"
+            android:src="@drawable/ic_menu_customer"
+            android:layout_below="@+id/iconLogo"
+            android:layout_alignParentStart="true"
+            android:visibility="gone"/>
+
+
+        <TextView
+            android:id="@+id/lblResetLoginMobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/customer_mobile_number"
+            android:layout_toEndOf="@+id/imgCusIcon"
+            android:layout_below="@+id/iconLogo"
+            android:textColor="@color/color_white"
+            android:textSize="16sp"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/lblResetLoginChange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iconLogo"
+            android:text="@string/resetlogin_change"
+            android:textColor="@color/color_white"
+            android:layout_alignParentEnd="true"
+            android:textSize="16sp"
+            android:visibility="gone"/>
+
+        <EditText
+            android:id="@+id/txtResetLoginNewPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="@string/resetlogin_new_password"
+            android:layout_below="@+id/lblResetLoginMobile"
+            android:layout_marginTop="90dp"
+            style="@style/EditTextDarkStyle"/>
+
+        <EditText
+            android:id="@+id/txtResetLoginREPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:inputType="textPassword"
+            android:hint="@string/resetlogin_new_repassword"
+            android:layout_below="@+id/txtResetLoginNewPassword"
+            style="@style/EditTextDarkStyle"/>
+
+
+        <EditText
+            android:id="@+id/txtResetLoginOTP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:inputType="number"
+            android:hint="@string/resetlogin_otp"
+            android:layout_below="@+id/txtResetLoginREPassword"
+            style="@style/EditTextDarkStyle"
+            android:singleLine="true"
+            android:layout_alignParentStart="true"
+            android:maxLength="10"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Resend"
+            android:textSize="18sp"
+            android:layout_below="@+id/txtResetLoginREPassword"
+            android:textColor="@color/color_white"
+            android:id="@+id/lblOTPResend"
+            android:layout_alignParentEnd="true"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/btnResetLoginProceed"
+            android:layout_centerHorizontal="true"
+            android:text="Reset"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/txtResetLoginOTP"
+            style="@style/common_button_style"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/btnResetLoginSendOTP"
+            android:layout_below="@+id/txtResetLoginREPassword"
+            android:text="@string/otp_button_resend"
+            android:layout_alignParentEnd="true"
+            style="@style/common_button_style"
+            android:visibility="gone"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New here? Register Now"
+            android:textSize="17sp"
+            android:layout_below="@+id/btnResetLoginProceed"
+            android:layout_marginTop="90dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/color_white"
+            android:id="@+id/lblNewCusRegister"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

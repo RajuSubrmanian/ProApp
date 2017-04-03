@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/app_margin_size"
+        android:layout_marginLeft="@dimen/app_margin_size"
+        android:id="@+id/layResetForm"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+
+        <ImageView
+            android:layout_width="@dimen/app_inspirenetz_logo_width"
+            android:layout_height="@dimen/app_inspirenetz_logo_height"
+            android:layout_marginTop="80dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/pb_logo"
+            android:id="@+id/iconLogo"
+            android:visibility="visible"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="Pitney Bowes"
+            android:textColor="@color/color_white"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_login_quotes"
+            android:textColor="@color/color_white"
+            android:id="@+id/lblWelcomeNotes"
+            android:layout_below="@+id/iconLogo"
+            android:layout_marginTop="30dp"
+            android:visibility="gone"/>
+
+        <EditText
+            android:id="@+id/txtCusMobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:inputType="phone"
+            android:hint="@string/customer_mobile_number"
+            android:layout_below="@+id/iconLogo"
+            style="@style/EditTextDarkStyle"
+            android:editable="true"/>
+
+        <EditText
+            android:id="@+id/txtCusPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:inputType="textPassword"
+            android:hint="@string/customer_password"
+            android:layout_below="@+id/txtCusMobile"
+            style="@style/EditTextDarkStyle"/>
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:id="@+id/btnResetLogin"
+            android:layout_centerHorizontal="true"
+            android:text="RESET LOGIN"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/txtCusPassword"
+            android:layout_alignParentLeft="true"
+            style="@style/common_button_style"
+            android:visibility="gone"/>
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:id="@+id/btnSignIn"
+            android:layout_centerHorizontal="true"
+            android:text="Log in"
+            android:layout_marginTop="40dp"
+            android:layout_below="@+id/txtCusPassword"
+            style="@style/common_button_style"
+            android:textAllCaps="false"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forgot Password? We got you!"
+            android:textSize="17sp"
+            android:layout_below="@+id/btnSignIn"
+            android:layout_marginTop="25dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/color_white"
+            android:id="@+id/lblForgotPassword"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New here? Register Now"
+            android:textSize="17sp"
+            android:layout_below="@+id/lblForgotPassword"
+            android:layout_marginTop="70dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/color_white"
+            android:id="@+id/lblNewCusRegister"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

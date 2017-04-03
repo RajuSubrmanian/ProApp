@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_bg_image">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/layPayWithPointsContainer"
+        android:visibility="visible"
+        android:layout_marginBottom="40dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/layPaytoContainer">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:id="@+id/lblPayTo"
+                android:text="@string/pay_to"
+                android:textColor="@color/light_color_control_hint_color"
+                android:textSize="@dimen/app_text_view_size"
+                android:visibility="gone"/>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                style="@style/spinner_style"
+                android:textSize="14sp"
+                android:id="@+id/spnMerchantPartner"
+                android:spinnerMode="dropdown"
+                android:visibility="visible"
+                android:layout_toEndOf="@+id/lblPayTo"
+                android:layout_marginTop="10dp"/>
+
+        </RelativeLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layPaytoContainer"
+            android:textColorHint="@color/light_color_control_hint_color"
+            style="@style/LightTextInputLayoutEditTextLayout"
+            app:hintTextAppearance="@style/LightTextInputLayoutFloatingLabel"
+            android:id="@+id/layCreditAccContainer"
+            android:visibility="gone">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/LightTextInputLayoutEditText"
+                android:hint="Credit Account"
+                android:id="@+id/txtCreditAcc"
+                android:inputType="phone"
+                android:textSize="@dimen/app_text_view_size"
+                android:editable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:singleLine="true"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layCreditAccContainer"
+            android:textColorHint="@color/light_color_control_hint_color"
+            style="@style/LightTextInputLayoutEditTextLayout"
+            app:hintTextAppearance="@style/LightTextInputLayoutFloatingLabel"
+            android:id="@+id/layAmountContainer"
+            android:layout_marginTop="10dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/LightTextInputLayoutEditText"
+                android:hint="Amount"
+                android:id="@+id/txtPayAmount"
+                android:inputType="numberDecimal"
+                android:textSize="@dimen/app_text_view_size"
+                android:singleLine="true"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layAmountContainer"
+            android:textColorHint="@color/light_color_control_hint_color"
+            style="@style/LightTextInputLayoutEditTextLayout"
+            app:hintTextAppearance="@style/LightTextInputLayoutFloatingLabel"
+            android:id="@+id/layReferenceContainer"
+            android:layout_marginTop="10dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/LightTextInputLayoutEditText"
+                android:hint="Account Number"
+                android:id="@+id/txtPayReference"
+                android:inputType="number"
+                android:textSize="@dimen/app_text_view_size"
+                android:singleLine="true"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layReferenceContainer"
+            android:textColorHint="@color/light_color_control_hint_color"
+            style="@style/LightTextInputLayoutEditTextLayout"
+            app:hintTextAppearance="@style/LightTextInputLayoutFloatingLabel"
+            android:id="@+id/layOtpContainer"
+            android:layout_marginTop="10dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/LightTextInputLayoutEditText"
+                android:hint="Pin"
+                android:id="@+id/txtPayPin"
+                android:inputType="number"
+                android:textSize="@dimen/app_text_view_size"
+                android:singleLine="true"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layOtpContainer"
+            android:id="@+id/layDebitAccount"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:id="@+id/lblDebitAccountAvlBalance"
+                android:text="@string/debit_account_available_balance"
+                android:textColor="@color/light_color_control_hint_color"
+                android:textSize="@dimen/app_text_view_size"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:id="@+id/txtDebitAccountAvlBalance"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/app_text_view_size"
+                android:layout_alignParentEnd="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:id="@+id/lblDebitAccountPointDebit"
+                android:text="@string/debit_account_point_debit"
+                android:layout_below="@+id/lblDebitAccountAvlBalance"
+                android:textColor="@color/light_color_control_hint_color"
+                android:textSize="@dimen/app_text_view_size"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:id="@+id/txtDebitAccountPointDebit"
+                android:layout_below="@+id/lblDebitAccountAvlBalance"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/app_text_view_size"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/button_background"
+            android:layout_below="@+id/layDebitAccount"
+            android:text="PROCEED"
+            android:id="@+id/btnPayProceed"
+            android:textSize="14sp"
+            android:textColor="@color/color_white"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+
+    <!-- payment status format -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/layPaymentStatusContainer"
+        android:visibility="gone"
+        android:background="@drawable/app_bg_image">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingTop="@dimen/app_bar_height"
+            >
+            <ImageView
+                android:layout_width="@dimen/summary_screen_status_icon_size"
+                android:layout_height="@dimen/summary_screen_status_icon_size"
+                android:layout_above="@+id/lblPaySummaryStatus"
+                android:id="@+id/imgPaySummaryStatus"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/icon_success"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/summary_status_success_text_color"
+                android:id="@+id/lblPaySummaryStatus"
+                android:text="Transaction Successfully Done !"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="15dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="@color/color_white"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                >
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/LightTextInputLayoutEditTextLayout"
+                    app:hintTextAppearance="@style/LightTextInputLayoutFloatingLabel">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        style="@style/LightTextInputLayoutEditTextNoBorder"
+                        android:id="@+id/txtTxnMerchantName"
+                        android:singleLine="true"
+                        android:editable="false"
+                        android:hint="Pay To"
+                        android:textSize="15sp"
+                        />
+                </android.support.design.widget.TextInputLayout>
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/LightTextInputLayoutEditTextLayout"
+                    app:hintTextAppearance="@style/LightTextInputLayoutFloatingLabel">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        style="@style/LightTextInputLayoutEditTextNoBorder"
+                        android:hint="Credit Account"
+                        android:id="@+id/txtTxnCreditAcc"
+                        android:singleLine="true"
+                        android:textSize="15sp"
+                        android:editable="false"/>
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp">
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/LightTextInputLayoutEditTextLayout"
+                    app:hintTextAppearance="@style/LightTextInputLayoutFloatingLabel">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        style="@style/LightTextInputLayoutEditTextNoBorder"
+                        android:id="@+id/txtTxnAmount"
+                        android:singleLine="true"
+                        android:hint="Amount"
+                        android:editable="false"
+                        android:textSize="15sp"
+                        />
+                </android.support.design.widget.TextInputLayout>
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/LightTextInputLayoutEditTextLayout"
+                    app:hintTextAppearance="@style/LightTextInputLayoutFloatingLabel">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        style="@style/LightTextInputLayoutEditTextNoBorder"
+                        android:hint="Reference"
+                        android:id="@+id/txtTxnReference"
+                        android:singleLine="true"
+                        android:textSize="15sp"
+                        android:editable="false"/>
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center_horizontal"
+                style="@style/common_button_style"
+                android:text="CONTINUE"
+                android:id="@+id/btnPaySummaryContinue"
+                android:textSize="14sp"
+                android:textColor="@color/color_white"
+                android:layout_marginRight="10dp"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

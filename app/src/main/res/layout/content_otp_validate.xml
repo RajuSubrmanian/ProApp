@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:id="@+id/layWelcomeForm"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/pb_logo"
+            android:id="@+id/iconLogo"
+            android:layout_marginBottom="40dp"
+            android:visibility="visible"/>
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="Pitney Bowes"
+            android:textColor="@color/color_white"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="40dp"
+            android:id="@+id/lblitneyPowes"
+            android:visibility="gone"/>
+
+        <EditText
+            android:id="@+id/txtOTP"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:inputType="text"
+            android:hint="@string/otp_filed_name"
+            android:layout_below="@+id/iconLogo"
+            style="@style/EditTextDarkStyle"
+            android:singleLine="true"
+            android:layout_alignParentLeft="true"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/btnConfirm"
+            android:layout_centerHorizontal="true"
+            android:text="Confirm"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/txtOTP"
+            style="@style/common_button_style"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:id="@+id/btnResend"
+            android:layout_centerHorizontal="true"
+            android:text="@string/otp_button_resend"
+            android:layout_below="@+id/iconLogo"
+            android:layout_alignParentRight="true"
+            style="@style/common_button_style"
+            android:layout_marginTop="50dp"
+            android:textAllCaps="false"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

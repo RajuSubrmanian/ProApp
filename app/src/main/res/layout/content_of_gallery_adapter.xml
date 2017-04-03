@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="170dp"
+        android:id="@+id/layCusBalanceContainer"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/reward_balance_container"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cus_loyaltyid"
+            android:textColor="@color/color_white"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:id="@+id/lblCusLoyaltyId"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cus_reward_points"
+            android:textColor="@color/color_white"
+            android:layout_centerInParent="true"
+            android:id="@+id/lblRewardPoints"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cus_reward_currency"
+            android:textColor="@color/color_white"
+            android:layout_marginTop="10dp"
+            android:layout_centerInParent="true"
+            android:layout_below="@+id/lblRewardPoints"
+            android:id="@+id/lblRewardCurrency"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

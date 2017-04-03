@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+                <Gallery
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rewardBalanceGallery"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="70dp" />
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/rewardBalanceGallery"
+            android:id="@+id/list"
+            android:dividerHeight="0dp"
+            android:scrollbars="none"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"/>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnPayWithPoints"
+            android:text="pay with points"
+            style="@style/common_button_style"
+            android:layout_alignParentBottom="true"
+            android:textAllCaps="true"
+            android:visibility="gone"/>
+
+</RelativeLayout>

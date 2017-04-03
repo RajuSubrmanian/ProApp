@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_common_bg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/layPayWithPointsContainer"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="90dp"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:background="@drawable/relative_layout_background"
+            android:id="@+id/layMandatoryDetails">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_red"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:id="@+id/layHeader"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:id="@+id/lblPaymentDetails"
+                    android:layout_weight="1"
+                    android:text="MANDATORY INFORMATION"
+                    android:textSize="@dimen/app_text_view_size"
+                    android:textColor="@color/color_white"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblCusFirstName"
+                android:layout_marginTop="20dp"
+                android:text="@string/cus_profile_fname"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/app_text_view_size"
+                android:layout_below="@+id/layHeader"
+                android:layout_alignParentStart="true"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtCusFirstName"
+                style="@style/EditTextDarkStyle"
+                android:inputType="text"
+                android:layout_below="@+id/layHeader"
+                android:layout_toEndOf="@+id/lblCusFirstName"
+                android:layout_alignParentEnd="true"
+                android:singleLine="true"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:id="@+id/lblCusLastName"
+                android:text="@string/cus_profile_lname"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/app_text_view_size"
+                android:layout_below="@+id/lblCusFirstName"
+                android:layout_alignParentStart="true"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtCusLastName"
+                style="@style/EditTextDarkStyle"
+                android:inputType="text"
+                android:layout_below="@id/lblCusFirstName"
+                android:layout_toEndOf="@+id/lblCusFirstName"
+                android:layout_alignParentEnd="true"
+                android:singleLine="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:id="@+id/lblCusEmail"
+                android:text="@string/cus_profile_email"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/app_text_view_size"
+                android:layout_below="@id/lblCusLastName"
+                android:layout_alignParentStart="true"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:id="@+id/txtCusEmail"
+                style="@style/EditTextDarkStyle"
+                android:singleLine="true"
+                android:layout_below="@id/lblCusLastName"
+                android:layout_alignParentEnd="true"
+                android:inputType="textEmailAddress"
+                android:layout_toEndOf="@+id/lblCusLastName"/>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:background="@drawable/relative_layout_background"
+            android:id="@+id/layDebitAccount"
+            android:layout_below="@+id/layMandatoryDetails">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_red"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:id="@+id/layPersonalInfoHeader"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:id="@+id/lblPersonalInformation"
+                    android:layout_weight="1"
+                    android:text="PERSONAL INFORMATION"
+                    android:textSize="15sp"
+                    android:textColor="@color/color_white"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:id="@+id/lblCusGender"
+                android:text="@string/cus_pro_gender"
+                android:textSize="@dimen/app_text_view_size"
+                android:textColor="@color/color_white"
+                android:layout_below="@+id/layPersonalInfoHeader"
+                />
+
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/radioGroup"
+                android:layout_below="@+id/layPersonalInfoHeader"
+                android:layout_toEndOf="@+id/lblCusMaritalStatus"
+                android:layout_marginTop="5dp">
+
+                <RadioButton android:id="@+id/radio_male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cus_gen_male"
+                    android:checked="true"
+                    android:textColor="@color/color_white"/>
+
+                <RadioButton android:id="@+id/radio_female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cus_gen_female"
+                    android:textColor="@color/color_white"/>
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:id="@+id/lblCusBirthday"
+                android:text="@string/cus_pro_birthday"
+                android:textSize="@dimen/app_text_view_size"
+                android:textColor="@color/color_white"
+                android:layout_below="@+id/radioGroup"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtCusBirthday"
+                style="@style/EditTextDarkStyle"
+                android:singleLine="true"
+                android:layout_above="@id/lblCusMaritalStatus"
+                android:layout_toEndOf="@id/lblCusMaritalStatus"
+                android:layout_alignParentEnd="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="10dp"
+                android:id="@+id/lblCusMaritalStatus"
+                android:text="@string/cus_marital_status"
+                android:textSize="@dimen/app_text_view_size"
+                android:textColor="@color/color_white"
+                android:layout_below="@+id/lblCusBirthday"
+                />
+
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/radioGroupMaritalStatus"
+                android:layout_below="@+id/lblCusBirthday"
+                android:layout_toEndOf="@+id/lblCusMaritalStatus"
+                android:layout_marginTop="10dp">
+
+                <RadioButton android:id="@+id/radio_single"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cus_marital_single"
+                    android:checked="true"
+                    android:textColor="@color/color_white"/>
+
+                <RadioButton android:id="@+id/radio_married"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cus_marital_married"
+                    android:textColor="@color/color_white"/>
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:id="@+id/lblCusAnniversary"
+                android:text="@string/cus_pro_anniversary"
+                android:textSize="@dimen/app_text_view_size"
+                android:textColor="@color/color_white"
+                android:layout_below="@+id/radioGroupMaritalStatus"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtCusAnniversary"
+                style="@style/EditTextDarkStyle"
+                android:singleLine="true"
+                android:layout_below="@id/radioGroupMaritalStatus"
+                android:layout_toEndOf="@id/lblCusMaritalStatus"
+                android:layout_alignParentEnd="true"
+                android:layout_marginBottom="10dp"
+                android:visibility="gone"/>
+
+
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnUpdateProfile"
+            android:text="UPDATE PROFILE"
+            style="@style/common_button_style"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
+

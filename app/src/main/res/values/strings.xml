@@ -1,0 +1,149 @@
+<resources>
+    <string name="app_name">ProApp</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- App welcome notes -->
+    <string name="app_welcome_quotes">Start the journey of smart rewards...</string>
+    <string name="app_login_quotes">Login into your smart rewards...</string>
+    <string name="app_register_quotes">Register for smart rewards...</string>
+
+    <!-- Customer details -->
+    <string name="customer_mobile_number">Mobile Number</string>
+    <string name="customer_password">Password</string>
+    <string name="customer_name">Name</string>
+    <string name="customer_email">Email</string>
+    <string name="customer_password_hint">**********</string>
+
+    <!-- OTP details -->
+    <string name="otp_filed_name">OTP Code</string>
+    <string name="otp_button_send">SEND</string>
+    <string name="otp_button_resend">Resend</string>
+
+    <!-- link -->
+    <string name="link">CHANGE</string>
+
+    <!--Reset Login Details -->
+    <string name="resetlogin_new_password">New Password</string>
+    <string name="resetlogin_new_repassword">Confirm Password</string>
+    <string name="resetlogin_otp">OTP</string>
+    <string name="resetlogin_change">CHANGE</string>
+
+    <!-- Payment details -->
+    <string name="pay_to">Pay To :</string>
+    <string name="credit_account">Credit Acc :</string>
+    <string name="amount">Amount :</string>
+    <string name="reference">Reference :</string>
+    <string name="pay_otp">OTP code :</string>
+    <string name="pay_status1">Payment Successful</string>
+    <string name="pay_status2">Your payment transaction is successful</string>
+
+    <!-- Debit account details -->
+    <string name="debit_account_merchant">Merchant :</string>
+    <string name="debit_account_reward">Reward :</string>
+    <string name="debit_account_available_balance">Avl Balance :</string>
+    <string name="debit_account_point_debit">Point Debit :</string>
+
+    <!-- Customer membership action details -->
+    <string name="mem_merchant_name">Merchant Name</string>
+    <string name="mem_rate_max_fashion">Rate Max Fashions</string>
+    <string name="mem_recommend_us">Recommend Us</string>
+    <string name="mem_phone1"><u>0804123423</u></string>
+    <string name="mem_phone2"><u>0804122459</u></string>
+    <string name="mem_email"><u>hello@maxfashions.com</u></string>
+    <string name="mem_place">Locate Us</string>
+    <string name="mem_qr_code">Show QR Code</string>
+    <string name="mem_scan_qr_code">Scan QR Code</string>
+
+    <!-- My transactions list content details -->
+    <string name="txn_date">Transaction Date</string>
+    <string name="txn_merchant_name">Merchant Name</string>
+    <string name="txn_paid_with">Paid With</string>
+    <string name="txn_points_debit">Points Debit</string>
+    <string name="txn_status">status</string>
+    
+    <!-- Customer home page details-->
+    <string name="cus_loyaltyid">Loyalty Id</string>
+    <string name="cus_reward_points">Reward Points</string>
+    <string name="cus_reward_currency">Reward Currency</string>
+    
+    <!-- Customer profile details-->
+    <!-- mandatory details-->
+    <string name="cus_profile_fname">First Name</string>
+    <string name="cus_profile_lname">Last Name</string>
+    <string name="cus_profile_email">Email</string>
+    
+    <!-- Personal information-->
+    <string name="cus_pro_gender">Gender</string>
+    <string name="cus_gen_male">Male</string>
+    <string name="cus_gen_female">Female</string>
+    <string name="cus_pro_birthday">Birthday</string>
+    <string name="cus_marital_status">Marital Status</string>
+    <string name="cus_marital_single">Single</string>
+    <string name="cus_marital_married">Married</string>
+    <string name="cus_pro_anniversary">Anniversary</string>
+
+    <!-- catalogue form information -->
+    <string name="cat_search_items">Search items</string>
+
+    <!-- set error in string -->
+    <!-- Error validation for customer details -->
+    <string name="err_customer_mobile">Please enter mobile number</string>
+    <string name="err_customer_password">Please enter password</string>
+    <string name="err_customer_name">Please enter name</string>
+    <string name="err_customer_email">Please enter email</string>
+
+    <!--Error Validation for Reset Login Details-->
+    <string name="err_reset_login_password">Please enter password</string>
+    <string name="err_reset_login_confirm_password">Please enter confirm password</string>
+    <string name="err_resetLogin_passwordMatch">Password do not match</string>
+    <string name="err_reset_login_otp">Please enter otp</string>
+
+    <!-- Error validation for otp -->
+    <string name="err_otp_validate">Please enter otp code</string>
+
+    <!-- Error validation for pay function -->
+    <string name="err_pay_amount">Please enter amount</string>
+    <string name="err_pay_credit_mobile">Please enter mobile no</string>
+    <string name="err_pay_reference">Please enter reference no</string>
+    <string name="err_pay_otp">Please enter otp code</string>
+
+    <!-- Error validation for customer profile update -->
+    <string name="err_cus_first_name">Please enter first name</string>
+    <string name="err_cus_last_name">Please enter last name</string>
+    <string name="err_cus_email">Please enter email</string>
+    <string name="err_cus_birth_date">Please select birth date</string>
+    <string name="err_cus_anniversary_date">Please select anniversary date</string>
+
+
+    <!--CUSTOMER ERRORS-->
+    <string name="error_customer_operation_failed">Operation failed</string>
+    <string name="error_customer_not_found">Customer not found</string>
+    <string name="error_customer_duplicate_id_field">Loyalty Id/Email/Mobile already exists</string>
+    <string name="error_customer_invalid_input">Invalid input</string>
+    <string name="error_customer_no_id_field">Please specify loyaltyid/email/mobile</string>
+
+    <!--ERROR STRINGS-->
+    <string name="error_operation_failed">Operation failed</string>
+    <string name="error_not_found">No data found</string>
+    <string name="error_no_data">No data available</string>
+    <string name="error_no_data_found">No data found</string>
+    <string name="error_no_balance">No Balance</string>
+    <string name="error_no_information">Invalid mobile number</string>
+    <string name="error_invalid_card_no">Invalid card number</string>
+    <string name="error_invalid_otp">Incorrect OTP</string>
+    <string name="error_invalid_pin">Incorrect PIN</string>
+    <string name="error_duplicate_id_field">Duplicate id fields</string>
+    <string name="error_invalid_input">Invalid input</string>
+    <string name="error_no_id_field">No id field</string>
+    <string name="title_activity_redemption_home">RedemptionHomeActivity</string>
+
+    <!-- CUSTOMER VALIDATION ERROR FOR PAY FUNCTION -->
+    <string name="err_invalid_merchant">Invalid merchant</string>
+    <string name="err_customer_not_active">Invalid mobile no</string>
+    <string name="err_insufficient_point_balance">Insufficient balance</string>
+    <string name="err_exception">Exception occurred</string>
+
+</resources>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.inspirenetz.app.proapp.promotions.PromotionDetailsViewFragment"
+    android:background="@drawable/app_bg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_white"
+        android:layout_marginTop="100dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:elevation="3dp"
+            card_view:cardCornerRadius="@dimen/card_promotion_radius"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <ImageView
+                    android:id="@+id/imgPromotionThumbnail"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:scaleType="fitXY" />
+
+                <TextView
+                    android:id="@+id/lblPromotionName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imgPromotionThumbnail"
+                    android:paddingLeft="@dimen/promotion_title_padding"
+                    android:paddingRight="@dimen/promotion_title_padding"
+                    android:paddingTop="@dimen/promotion_title_padding"
+                    android:paddingBottom="@dimen/promotion_title_padding"
+                    android:textColor="@color/promotion_title"
+                    android:textSize="@dimen/promotion_title" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/cardView"
+            android:id="@+id/layPromotionDetailsContainer"
+            android:layout_marginTop="40dp"
+            android:visibility="visible"
+            android:layout_margin="@dimen/card_margin"
+            android:scrollbars="vertical"
+            android:overScrollMode="ifContentScrolls">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/imgFavouriteIcon"
+                android:src="@drawable/icon_favourite"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentStart="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblFavouriteCount"
+                android:text="100"
+                android:textColor="@color/light_color_control_hint_color"
+                android:layout_toEndOf="@+id/imgFavouriteIcon"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblVlaidTill"
+                android:text="Valid till"
+                android:textColor="@color/light_color_control_hint_color"
+                android:layout_toStartOf="@+id/lblPromotionExpiryDate"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblPromotionExpiryDate"
+                android:text="Expiry Date"
+                android:textColor="@color/light_color_control_hint_color"
+                android:layout_marginTop="15dp"
+                android:layout_alignParentEnd="true"/>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_color_control_hint_color"
+                android:layout_below="@+id/lblPromotionExpiryDate"
+                android:layout_marginTop="20dp"
+                android:id="@+id/horizontalLine"
+                android:visibility="visible"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblShortDescription"
+                android:text="short descrption"
+                android:textColor="@color/light_color_control_hint_color"
+                android:layout_below="@+id/imgFavouriteIcon"
+                android:layout_marginTop="30dp"
+                android:layout_alignParentStart="true" />
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_color_control_hint_color"
+                android:layout_below="@+id/lblShortDescription"
+                android:layout_marginTop="10dp"
+                android:id="@+id/secondhorizontalLine"
+                android:visibility="visible"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblPromotionMoreDetails"
+                android:text="Promotion more detatils"
+                android:textColor="@color/light_color_control_hint_color"
+                android:layout_below="@+id/secondhorizontalLine"
+                android:layout_marginTop="15dp"
+                android:layout_alignParentStart="true" />
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/icon_flag"
+                android:id="@+id/imgBtnClaimPromotion"
+                android:scaleType="centerInside"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

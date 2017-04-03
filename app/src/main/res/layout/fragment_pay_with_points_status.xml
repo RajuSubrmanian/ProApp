@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="100dp"
+    android:orientation="vertical"
+    android:background="@drawable/app_common_bg"
+    >
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_status_success"
+        android:id="@+id/imgTxnStatus"
+        android:textColor="@color/color_white"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="10dp"
+        android:id="@+id/lblPayStatus1"
+        android:text="@string/pay_status1"
+        android:textSize="@dimen/app_text_view_size"
+        android:textColor="@color/color_white"
+        android:layout_toEndOf="@+id/imgTxnStatus"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="10dp"
+        android:id="@+id/lblPayStatus2"
+        android:text="@string/pay_status2"
+        android:textSize="@dimen/app_text_view_size"
+        android:textColor="@color/color_white"
+        android:layout_below="@+id/imgTxnStatus"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/relative_layout_background"
+        android:layout_below="@+id/lblPayStatus2"
+        android:layout_marginTop="40dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_red"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:id="@+id/layHeader"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtTxnDate"
+                android:text="PAYMENT STATUS"
+                android:textSize="@dimen/app_text_view_size"
+                android:textColor="@color/color_white"
+                android:layout_gravity="center"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblTxnMerchantName"
+            android:text="@string/pay_to"
+            android:textSize="@dimen/app_text_view_size"
+            android:textColor="@color/color_white"
+            android:layout_below="@+id/layHeader"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtTxnMerchantName"
+            android:text="@string/pay_to"
+            android:textSize="@dimen/app_text_view_size"
+            android:textColor="@color/color_white"
+            android:layout_below="@+id/layHeader"
+            android:layout_alignParentEnd="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/credit_account"
+            android:textSize="@dimen/app_text_view_size"
+            android:id="@+id/lblTxnCreditAcc"
+            android:layout_below="@+id/txtTxnMerchantName"
+            android:textColor="@color/color_white"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:id="@+id/txtTxnCreditAcc"
+            android:text="@string/credit_account"
+            android:textSize="@dimen/app_text_view_size"
+            android:layout_below="@+id/txtTxnMerchantName"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/color_white"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/amount"
+            android:id="@+id/lblTxnAmount"
+            android:textSize="@dimen/app_text_view_size"
+            android:layout_below="@+id/lblTxnCreditAcc"
+            android:textColor="@color/color_white"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/amount"
+            android:id="@+id/txtTxnAmount"
+            android:textSize="@dimen/app_text_view_size"
+            android:layout_below="@+id/lblTxnCreditAcc"
+            android:textColor="@color/color_white"
+            android:layout_alignParentEnd="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/reference"
+            android:id="@+id/lblTxnReference"
+            android:textSize="@dimen/app_text_view_size"
+            android:layout_below="@+id/lblTxnAmount"
+            android:textColor="@color/color_white"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/reference"
+            android:id="@+id/txtTxnReference"
+            android:textSize="@dimen/app_text_view_size"
+            android:layout_below="@+id/lblTxnAmount"
+            android:textColor="@color/color_white"
+            android:layout_alignParentEnd="true"
+            />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="#c0c0c0"
+            android:layout_below="@+id/lblTxnReference"
+            android:layout_marginTop="10dp"
+            android:id="@+id/horizontalLine"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/txn_paid_with"
+            android:id="@+id/lblTxnPaidWith"
+            android:textSize="@dimen/app_text_view_size"
+            android:layout_below="@+id/horizontalLine"
+            android:textColor="@color/color_white"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/txn_paid_with"
+            android:id="@+id/txtTxnPaidWith"
+            android:textSize="@dimen/app_text_view_size"
+            android:layout_below="@+id/horizontalLine"
+            android:textColor="@color/color_white"
+            android:layout_alignParentEnd="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/txn_points_debit"
+            android:id="@+id/lblTxnPointsDebit"
+            android:textSize="@dimen/app_text_view_size"
+            android:layout_below="@+id/lblTxnPaidWith"
+            android:textColor="@color/color_white"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/txn_points_debit"
+            android:id="@+id/txtTxnPointsDebit"
+            android:textSize="@dimen/app_text_view_size"
+            android:layout_below="@+id/lblTxnPaidWith"
+            android:textColor="@color/color_white"
+            android:layout_alignParentEnd="true"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:id="@+id/btnViewItems"
+            android:text="Filter"
+            android:textAllCaps="true"
+            android:textSize="@dimen/app_text_view_size"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnPayProceed"
+        android:text="VIEW MY TRANSACTIONS"
+        style="@style/common_button_style"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
